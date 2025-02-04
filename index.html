@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Meta Tags for SEO and Social Media -->
+    <meta name="description" content="PornReload - Reload to watch random adult videos. Enjoy fresh content each time you reload the page.">
+    <meta name="keywords" content="adult video, porn reload, random porn, reload videos, random adult videos, adult streaming">
+    <meta name="author" content="PornReload">
+    <meta property="og:title" content="PornReload - Get Random Adult Videos on Reload">
+    <meta property="og:description" content="Reload to watch a random adult video and discover fresh content with every reload.">
+    <meta property="og:image" content="https://res.cloudinary.com/dyhheatdf/image/upload/f_auto,q_auto/v1/Attack%20on%20titan/zbufvnvtbenedimonpuj"> <!-- Optional Image for Social Media -->
+    <meta property="og:url" content="https://pornreload.netlify.app">
+    <meta name="twitter:card" content="https://res.cloudinary.com/dyhheatdf/image/upload/f_auto,q_auto/v1/Attack%20on%20titan/zbufvnvtbenedimonpuj">
+    <meta name="twitter:title" content="PornReload - Get Random Adult Videos on Reload">
+    <meta name="twitter:description" content="Enjoy fresh adult content with each reload. Watch random adult videos every time you refresh the page.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dyhheatdf/image/upload/f_auto,q_auto/v1/Attack%20on%20titan/zbufvnvtbenedimonpuj"> <!-- Optional Image for Twitter -->
+
+    <title>PornReload - Get Random Adult Videos on Reload</title>
+
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ff4b5c;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+        }
+
+        .header-text {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #d0d0d0;
+        }
+
+        iframe {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 60vh;
+            max-width: 800px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff4b5c;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff2a3b;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .header-text {
+                font-size: 1rem;
+            }
+
+            iframe {
+                height: 50vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            iframe {
+                height: 45vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>PornReload</h1>
+    <div class="header-text">
+        <p>Reload to watch a random adult video!</p>
+        <p>Enjoy fresh adult content with every reload.</p>
+    </div>
+    <iframe id="videoPlayer" src="" allowfullscreen></iframe>
+    <button id="reloadButton">Reload Video</button>
+
+    <script>
+        function loadRandomVideo() {
+            // Generate a random number between 1 and 10000
+            const randomNumber = Math.floor(Math.random() * 10000) + 1;
+
+            // Create the video URL with the random number
+            const videoUrl = `https://player-05qd.onrender.com/?video=https://goodproxy.goodproxy.workers.dev/fetch?url=https://vod.mycamtv.net/${randomNumber}.m3u8`;
+
+            // Set the iframe source to the generated URL
+            document.getElementById('videoPlayer').src = videoUrl;
+        }
+
+        // Load the initial random video on page load
+        window.onload = loadRandomVideo;
+
+        // Add event listener to the reload button
+        document.getElementById('reloadButton').addEventListener('click', loadRandomVideo);
+    </script>
+</body>
+</html>
