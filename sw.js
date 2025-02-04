@@ -10,6 +10,13 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+  const url = event.request.url;
+
+  // Bypass caching for JW Player scripts and video requests
+  if (url.includes("jwplayer.com") || url.includes(".m3u8") || url.includes(".mp4")) {
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then((response) => {
       return response || fetch(event.request);
